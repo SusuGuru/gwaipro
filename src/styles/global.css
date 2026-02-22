@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #e7f1f0, #f2dfb6);
+  color: #0e5f59;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+button {
+  cursor: pointer;
+}

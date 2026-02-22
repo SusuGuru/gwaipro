@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #0e5f59;
+  font-weight: 500;
+}
+
+.download-btn {
+  background: #0e5f59;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+}

@@ -1,0 +1,32 @@
+.blog-hero {
+  background: #f2c300;
+  padding: 100px 10%;
+  color: white;
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.blog-item {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.blog-image {
+  height: 200px;
+  background: #7f9d95;
+  margin-bottom: 20px;
+}
+
+.read-btn {
+  background: #0e5f59;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
