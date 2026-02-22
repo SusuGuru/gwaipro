@@ -1,7 +1,83 @@
 .footer {
-  background: #0e5f59;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-  margin-top: 100px;
+  background: #166d67; /* exact teal tone */
+  color: #ffffff;
+  padding: 70px 10% 20px 10%;
+}
+
+/* MAIN LAYOUT */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* LEFT SIDE */
+.footer-left {
+  max-width: 220px;
+}
+
+.footer-logo {
+  width: 40px;
+  margin-bottom: 12px;
+}
+
+.footer-left h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 12px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+/* SOCIAL ICONS */
+.socials {
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* RIGHT SIDE */
+.footer-right {
+  display: flex;
+  gap: 80px;
+}
+
+.footer-column h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.footer-column p {
+  font-size: 20px;
+  margin-bottom: 8px;
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.footer-column p:hover {
+  opacity: 1;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 50px;
+  padding-top: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 25px;
 }

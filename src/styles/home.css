@@ -1,50 +1,184 @@
-.hero {
-  text-align: center;
-  padding: 120px 20px;
+.home {
+  padding: 0 10%;
 }
 
-.hero h1 {
-  font-size: 60px;
-  font-weight: 700;
-}
+/* ================= HOW IT WORKS ================= */
 
-.hero p {
-  margin-top: 20px;
-  font-size: 20px;
-}
-
-.how-section {
+.how {
   display: flex;
   justify-content: space-between;
-  padding: 100px 10%;
   align-items: center;
+  padding: 120px 0;
+  position: relative;
 }
 
-.phone-mockups {
+/* LEFT TEXT */
+.how-left {
+  flex: 1;
+}
+
+.how-left h2 {
+  font-size: 64px;
+  color: #0e5f59;
+  line-height: 1.1;
+}
+
+.how-left p {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #0e5f59;
+  max-width: 320px;
+}
+
+/* RIGHT PHONES */
+.how-right {
+  flex: 1;
   display: flex;
-  gap: 20px;
+  justify-content: center;
 }
 
-.mock {
-  width: 150px;
-  height: 300px;
-  background: #0e5f59;
-  border-radius: 20px;
+.phones {
+  position: relative;
+  width: 420px;
+  height: 500px; /* IMPORTANT: controls overlap */
 }
 
-.blog-preview {
-  padding: 100px 10%;
+/* Base phone style */
+.phones img {
+  width: 230px;
+  position: absolute;
 }
 
-.blog-grid {
+/* First phone */
+.first {
+  left: 0;
+  top: 80px;
+  z-index: 1;
+}
+
+.step-text {
+  position: absolute;
+  top: 340px;
+  left: 40px;
+  font-size: 20px;
+  color: #0e5f59;
+}
+
+/* Second phone */
+.second {
+  left: 120px;
+  top: 20px;
+  z-index: 2;
+}
+
+/* Third phone */
+.third {
+  left: 240px;
+  top: 100px;
+  z-index: 0;
+}
+
+/* ================= BLOGS ================= */
+
+.blogs {
+  display: flex;
+  justify-content: space-between;
+  padding: 140px 0;
+}
+
+.blogs-left {
+  flex: 1;
+}
+
+.blogs-left h2 {
+  font-size: 64px;
+  color: #0e5f59;
+}
+
+.blogs-left p {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #0e5f59;
+  max-width: 320px;
+}
+
+.blogs-right {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 40px;
+  gap: 40px;
 }
 
 .blog-card {
-  height: 200px;
-  background: #7f9d95;
-  border-radius: 10px;
+  background: #6f8e87;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-card img {
+  width: 150px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .how,
+  .blogs {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .how-left,
+  .blogs-left {
+    margin-bottom: 60px;
+  }
+
+  .phones {
+    transform: scale(0.9);
+  }
+
+  .blogs-right {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .home {
+    padding: 0 6%;
+  }
+
+  .how-left h2,
+  .blogs-left h2 {
+    font-size: 42px;
+  }
+
+  .how-left p,
+  .blogs-left p {
+    font-size: 16px;
+  }
+
+  .phones {
+    width: 300px;
+    height: 400px;
+  }
+
+  .phones img {
+    width: 170px;
+  }
+
+  .second {
+    left: 70px;
+  }
+
+  .third {
+    left: 140px;
+  }
+
+  .blogs-right {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,30 +1,100 @@
+.about-wrapper {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-bottom: 120px;
+}
+
+/* HERO */
 .about-hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px 80px 20px;
 }
 
+.about-hero h1 {
+  font-size: 64px;
+  font-weight: 700;
+  color: #0e5f59;
+}
+
+.about-hero p {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #0e5f59;
+}
+
+/* MISSION & VISION */
 .mission-vision {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
   padding: 80px 10%;
 }
 
+.mission,
+.vision {
+  width: 400px;
+}
+
+.mission h2,
+.vision h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #0e5f59;
+}
+
+.mission p,
+.vision p {
+  font-size: 16px;
+  color: #0e5f59;
+  line-height: 1.6;
+}
+
+/* Vertical Divider */
+.divider {
+  width: 2px;
+  height: 200px;
+  background-color: #0e5f59;
+}
+
+/* TEAM */
 .team {
-  padding: 80px 10%;
   text-align: center;
+  padding: 100px 10% 0 10%;
+}
+
+.team h2 {
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #0e5f59;
 }
 
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-top: 40px;
+  gap: 60px 40px;
+}
+
+.team-card {
+  text-align: center;
 }
 
 .avatar {
-  width: 80px;
-  height: 80px;
-  background: #7f9d95;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  margin: auto;
+  object-fit: cover;
+  margin: 15px 0;
+}
+
+.team-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #0e5f59;
+}
+
+.role {
+  font-size: 14px;
+  color: #0e5f59;
 }

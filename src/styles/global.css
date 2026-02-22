@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #e7f1f0, #f2dfb6);
+
   color: #0e5f59;
 }
 
@@ -16,4 +16,14 @@ h1, h2, h3 {
 
 button {
   cursor: pointer;
+}.page-wrapper {
+  background-image: url("../assets/bg.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+.page-wrapper {
+  background-image: url("../assets/bg.png");
+  background-size: cover;
+  background-position: center;
 }
