@@ -2,6 +2,23 @@
   padding: 0 10%;
 }
 
+.hero {
+  text-align: center;
+  padding: 120px 8% 80px 8%;
+}
+
+.hero h1 {
+  font-size: 72px;
+  color: #0e5f59;
+  line-height: 1.1;
+}
+
+.hero p {
+  margin-top: 25px;
+  font-size: 22px;
+  color: #0e5f59;
+}
+
 /* ================= HOW IT WORKS ================= */
 
 .how {
@@ -10,6 +27,7 @@
   align-items: center;
   padding: 120px 0;
   position: relative;
+  overflow: hidden;   /* ← CUTS THEM NATURALLY */
 }
 
 /* LEFT TEXT */
@@ -73,9 +91,9 @@
 
 /* Third phone */
 .third {
-  left: 240px;
-  top: 100px;
-  z-index: 0;
+  left: 210px;
+  top: 140px;
+  z-index: 4;
 }
 
 /* ================= BLOGS ================= */
@@ -83,42 +101,81 @@
 .blogs {
   display: flex;
   justify-content: space-between;
-  padding: 140px 0;
+  align-items: flex-start;
+  padding: 140px 8%;
+  gap: 80px;
 }
 
+/* LEFT SIDE */
 .blogs-left {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
 }
 
 .blogs-left h2 {
-  font-size: 64px;
+  font-size: 100px;
   color: #0e5f59;
 }
 
 .blogs-left p {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 25px;
   color: #0e5f59;
-  max-width: 320px;
+  max-width: 300px;
 }
 
+/* Card under text */
+.left-card {
+  margin-top: 60px;
+  height: 220px;
+}
+
+/* RIGHT SIDE GRID (2 x 2) */
 .blogs-right {
-  flex: 1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 }
 
 .blog-card {
   background: #6f8e87;
-  padding: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 220px;        /* or whatever height you want */
+  padding: 0;           /* IMPORTANT */
+  overflow: hidden;     /* prevents overflow */
 }
 
 .blog-card img {
-  width: 150px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* makes it fill nicely */
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .blogs {
+    flex-direction: column;
+  }
+
+  .blogs-left,
+  .blogs-right {
+    width: 100%;
+  }
+
+  .blogs-right {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blogs-left h2 {
+    font-size: 42px;
+  }
+
+  .blogs-right {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ================= RESPONSIVE ================= */
@@ -181,4 +238,120 @@
   .blogs-right {
     grid-template-columns: 1fr;
   }
+}
+.phones img {
+  width: 230px;
+  height: auto;
+  max-height: 460px;
+  object-fit: contain;
+  position: absolute;
+}
+.first {
+  left: 0;
+  top: 90px;
+  z-index: 2;
+}
+
+.second {
+  left: 110px;
+  top: 20px;
+  z-index: 3;
+}
+
+.third {
+  left: 230px;
+  top: 110px;
+  z-index: 1;
+}
+.phones {
+  position: relative;
+  width: 420px;
+  height: 520px;
+}
+.step-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  font-size: 20px;
+  color: #0e5f59;
+}
+.step-text {
+  position: absolute;
+  top: 470px;
+  left: 60px;
+  font-size: 18px;
+  color: #0e5f59;
+}
+.phones {
+  position: relative;
+  width: 420px;
+  height: 520px;
+}
+
+/* All phones */
+.phones img {
+  width: 230px;
+  height: auto;
+  position: absolute;
+  object-fit: contain;
+}
+
+/* LEFT phone (back) */
+.first {
+  left: 20px;
+  top: 110px;
+  z-index: 1;
+}
+
+/* MIDDLE phone (front and highest) */
+.second {
+  left: 120px;
+  top: 10px;
+  z-index: 3;
+}
+
+/* RIGHT phone (middle layer) */
+.third {
+  left: 240px;
+  top: 30px;
+  z-index: 5;
+}
+.phones {
+  position: relative;
+  width: 420px;
+  height: 450px;
+}
+.blogs-left,
+.blogs-right {
+  flex: 1;
+}
+
+.blogs-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 45px;
+  margin: 50px;
+}
+
+.blog-card {
+  height: 220px;
+  background: #6f8e87;
+  overflow: hidden;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blogs-left {
+  flex: 0.8;
+  gap: 5px;
+}
+
+.blogs-right {
+  flex: 1.2;
+}
+.blogs-left .blog-card {
+  width: 329.13px;
 }

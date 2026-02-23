@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  padding: 20px 0px 20px 60px;
 }
 
 .logo {
@@ -23,4 +23,32 @@
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+/* Push everything after logo to the right */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;   /* THIS pushes links to the right */
+  margin-right: 30px;  /* space before button */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0e5f59;
+  font-weight: 500;
+}
+
+.download-btn {
+  background: #0e5f59;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
 }

@@ -44,7 +44,6 @@ function About() {
               <p className="role">Co-Founder and CEO</p>
               <img src={avatar} alt="team" className="avatar" />
               <h3>Mr. Donald Gwaikolo</h3>
-              <p className="role">Co-Founder and CEO</p>
             </div>
           ))}
         </div>

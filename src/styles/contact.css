@@ -1,27 +1,177 @@
+/* ================================
+   CONTACT PAGE (NO BACKGROUND HERE)
+================================ */
 .contact-page {
-  padding: 100px 20px;
-  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
 }
 
-.contact-form {
-  width: 400px;
-  margin: 40px auto;
+/* ================================
+   MAIN CONTAINER
+================================ */
+.contact-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto 120px auto;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 70px;
+}
+
+/* ================================
+   LEFT SIDE
+================================ */
+.contact-left {
+  flex: 1;
+  color: #1f6f69;
+}
+
+.contact-left h1 {
+  font-size: 82px;
+  line-height: 85px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.contact-description {
+  font-size: 17px;
+  line-height: 28px;
+  color: #4c6f6d;
+  max-width: 460px;
+  margin-bottom: 40px;
+}
+
+.contact-info p {
+  margin-bottom: 22px;
+  font-size: 16px;
+  color: #2c5e5b;
+}
+
+.contact-info strong {
+  font-weight: 600;
+  color: #1f6f69;
+}
+
+.availability {
+  font-size: 14px;
+  color: #6f8f8c;
+}
+
+/* ================================
+   RIGHT SIDE FORM CARD
+================================ */
+.contact-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Soft white shade like screenshot */
+.contact-form {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(4px);
+}
+
+/* ================================
+   FORM LAYOUT
+================================ */
+.form-row {
+  display: flex;
+  gap: 55px;
+  margin-bottom: 10px;
+}
+
+.form-row div {
+  flex: 1;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #2c5e5b;
+  font-weight: 500;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  width: 100%;
+  padding: 15px 18px;
+  border-radius: 16px;
+  border: 1px solid #9bbfbd;
+  background-color: #eef5f3;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+  margin-bottom: 22px;
 }
 
-.contact-form button {
-  background: #0e5f59;
-  color: white;
-  padding: 10px;
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #7a9c99;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1f6f69;
+  background-color: #ffffff;
+}
+
+.contact-form textarea {
+  min-height: 160px;
+  resize: none;
+}
+
+/* ================================
+   BUTTON
+================================ */
+.send-btn {
+  margin-top: 10px;
+  padding: 15px 30px;
+  border-radius: 16px;
   border: none;
-  border-radius: 6px;
+  background-color: #1f6f69;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  float: right;
+  transition: 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #174f4c;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .contact-left h1 {
+    font-size: 56px;
+    line-height: 60px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .send-btn {
+    width: 100%;
+    float: none;
+  }
 }
