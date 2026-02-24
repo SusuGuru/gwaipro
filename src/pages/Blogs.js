@@ -1,7 +1,7 @@
 import "../styles/blogs.css";
 import innovation from "../assets/innovation.png";
 import blogImg from "../assets/blog.png";
-import authorImg from "../assets/avatar.png"
+import authorImg from "../assets/avatar.png";
 
 function Blogs() {
   return (
@@ -9,7 +9,11 @@ function Blogs() {
 
       {/* ================= HERO SECTION ================= */}
       <section className="blog-hero">
-        <img src={innovation} alt="Innovation Book" className="innovation-img" />
+        <img
+          src={innovation}
+          alt="Innovation Book"
+          className="innovation-img"
+        />
 
         <div className="hero-overlay">
           <div className="hero-left">
@@ -23,7 +27,11 @@ function Blogs() {
 
           <div className="hero-right">
             <div className="author">
-              <img src={authorImg} alt="Author" className="author-img" />
+              <img
+                src={authorImg}
+                alt="Author"
+                className="author-img"
+              />
               <div>
                 <h4>Josiah Sarbah</h4>
                 <span>24 Jan 2026 • 10 min read</span>
@@ -55,37 +63,35 @@ function Blogs() {
 
         {/* ================= BLOG GRID ================= */}
         <div className="blog-grid">
-
-          {/* BLOG CARD */}
           {[1, 2, 3, 4, 5, 6].map((item) => (
             <div key={item} className="blog-card">
 
               <div className="blog-image">
-                <img src={blogImg} alt="The Psychology of Money" />
+                <img
+                  src={blogImg}
+                  alt="The Psychology of Money"
+                />
               </div>
 
-              <div className="blog-content">
-                <h3>The Psychology of Money</h3>
+              <h3>The Psychology of Money</h3>
 
-                <div className="blog-meta">
-                  <span>Author: Morgan Housel</span>
-                  <span> | </span>
-                  <span>Published on 14 Jan, 2026</span>
-                </div>
-
-                <p>
-                  This book is about the need to understand how money works
-                  for musicians so that they don’t end up being broke.
-                  You will realize that wealth is not about income but
-                  about behavior and long-term discipline.
-                </p>
-
-                <button className="read-btn">Read Now</button>
+              <div className="blog-meta">
+                <span>Author: Morgan Housel</span>
+                <span> | </span>
+                <span>Published on 14 Jan, 2026</span>
               </div>
+
+              <p>
+                This book is about the need to understand how money works
+                for musicians so that they don’t end up being broke.
+                You will realize that wealth is not about income but
+                about behavior and long-term discipline.
+              </p>
+
+              <button className="read-btn">Read Now</button>
 
             </div>
           ))}
-
         </div>
 
         {/* ================= PAGINATION ================= */}

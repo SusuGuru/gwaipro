@@ -31,8 +31,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-top: 65%;
-  height: 95px;
+top: auto;
+  height: auto;
 
   background: rgba(111, 90, 0, 0.3);
   backdrop-filter: blur(0px);
@@ -334,4 +334,12 @@ top: 65%;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 40px;
 }
+}
+.blogs-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.blog-card {
+  height: auto;
+  overflow: visible;
 }

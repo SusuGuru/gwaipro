@@ -10,16 +10,35 @@ function Footer() {
         {/* LEFT SECTION */}
         <div className="footer-left">
           <img src={logo} alt="logo" className="footer-logo" />
-        
+
           <p className="tagline">
             Connecting Musician<br />
             Around the World.
           </p>
 
           <div className="socials">
+
+            {/* Facebook (not linked) */}
             <i className="fab fa-facebook-f"></i>
-            <i className="fab fa-instagram"></i>
-            <i className="fab fa-tiktok"></i>
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/gwaipro/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-instagram"></i>
+            </a>
+
+            {/* TikTok */}
+            <a
+              href="https://www.tiktok.com/@gwaipro"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-tiktok"></i>
+            </a>
+
           </div>
         </div>
 
@@ -34,13 +53,13 @@ function Footer() {
 
           <div className="footer-column">
             <h4>Resources</h4>
-            <p>Blogs</p>
+            <a href="/blogs"><p>Blogs</p></a>
           </div>
 
           <div className="footer-column">
             <h4>Company</h4>
-            <p>About Us</p>
-            <p>Contact Us</p>
+            <a href="/about"><p>About Us</p></a>
+            <a href="/contact"><p>Contact Us</p></a>
           </div>
 
         </div>
