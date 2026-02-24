@@ -3,7 +3,6 @@
   width: 100%;
   overflow-x: hidden;
   font-family: "Inter", sans-serif;
-  background: linear-gradient(180deg, #f6f1e7 0%, #f2eadf 40%, #efe6db 100%);
   color: #1f3c3a;
 }
 
@@ -310,4 +309,29 @@ top: 65%;
   .read-btn {
     padding: 10px;
   }
+  .blog-image {
+  background: #7e8f8a;
+  height: 220px;      /* important */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.blog-content {
+  padding-top: 25px;
+}
+.blogs-section {
+  padding: 80px 8%;
+  max-width: 1200px;   /* add this */
+  margin: 0 auto;      /* add this */
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
 }

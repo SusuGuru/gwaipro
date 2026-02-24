@@ -100,7 +100,6 @@
 }
 .about-divider {
   display: block;
-  margin: 60px auto;   /* centers it */
-  width: 120px;        /* adjust to match Figma */
-  height: auto;
+  width: 15px;
+  height: 418px;
 }

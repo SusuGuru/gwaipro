@@ -10,7 +10,7 @@ function Footer() {
         {/* LEFT SECTION */}
         <div className="footer-left">
           <img src={logo} alt="logo" className="footer-logo" />
-          <h3>GwaiPro</h3>
+        
           <p className="tagline">
             Connecting Musician<br />
             Around the World.
