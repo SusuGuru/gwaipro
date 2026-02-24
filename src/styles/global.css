@@ -1,7 +1,7 @@
 body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;   /* default weight */
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-
   color: #0e5f59;
 }
 

@@ -52,3 +52,15 @@
   border-radius: 8px;
   cursor: pointer;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e5e5e5; /* 👈 divider line */
+}
+
+.logo img {
+  width: 130px;   /* adjust to match Figma */
+  height: auto;
+}

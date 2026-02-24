@@ -1,6 +1,7 @@
 import bg from "../assets/bg.png";
 import avatar from "../assets/avatar.png";
 import "../styles/about.css";
+import divider from "../assets/divider.png";
 
 function About() {
   return (
@@ -26,7 +27,7 @@ function About() {
           </p>
         </div>
 
-        <div className="divider"></div>
+   <img src={divider} alt="divider" className="about-divider" />
 
         <div className="vision">
           <h2>The GwaiPro Vision</h2>

@@ -81,3 +81,14 @@
   display: flex;
   gap: 25px;
 }
+.footer {
+  background-color: #0e5f59; /* or your dark brand color */
+  color: white;
+  padding: 80px 40px 40px 40px;
+}
+
+.footer-logo {
+  width: 140px;   /* adjust to match Figma */
+  height: auto;
+  margin-bottom: 20px;
+}

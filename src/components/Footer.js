@@ -1,5 +1,5 @@
 import "../styles/footer.css";
-import logo from "../assets/innovation.png";
+import logo from "../assets/gwaipro-w.png";
 
 function Footer() {
   return (

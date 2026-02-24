@@ -98,3 +98,9 @@
   font-size: 14px;
   color: #0e5f59;
 }
+.about-divider {
+  display: block;
+  margin: 60px auto;   /* centers it */
+  width: 120px;        /* adjust to match Figma */
+  height: auto;
+}
