@@ -57,10 +57,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 50px  50px; 
-  border-bottom: 1px solid #e5e5e5; /* 👈 divider line */
 }
 
 .logo img {
   width: 104px;
   height: 73px;
+}.nav-links a:hover,
+.nav-links a:focus {
+  color: #064a45;   /* deep green */
+}
+.download-btn:hover {
+  background: #064a45;
 }
