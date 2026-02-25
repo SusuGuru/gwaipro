@@ -5,6 +5,10 @@
   font-family: "Inter", sans-serif;
   color: #1f3c3a;
 }
+/* GLOBAL TEXT COLOR FOR BLOGS PAGE */
+.blogs-page {
+  color: #1f6f6a; /* green tone like the design */
+}
 
 /* ================= HERO SECTION ================= */
 .blog-hero {
@@ -342,4 +346,41 @@ top: auto;
 .blog-card {
   height: auto;
   overflow: visible;
+}
+.sort-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.page,
+.nav {
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.page.active {
+  font-weight: bold;
+  border: 1px solid black;
+}
+.blog-image {
+  background: #7e8f8a;
+  height: 240px;  /* fixed height */
+  overflow: hidden;
+}
+
+.blog-image img {
+  width: 140%;
+  height: 130%;
+  object-fit: cover;   /* fills the container exactly */
+  display: block;
 }
