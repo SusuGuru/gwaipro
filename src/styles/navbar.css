@@ -1,71 +1,108 @@
 .navbar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 0px 20px 60px;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 22px;
-}
-
-.nav-links a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #0e5f59;
-  font-weight: 500;
-}
-
-.download-btn {
-  background: #0e5f59;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-}
-.navbar {
-  display: flex;
-  align-items: center;
-  padding: 20px 60px;
-}
-
-/* Push everything after logo to the right */
-.nav-links {
-  display: flex;
-  gap: 30px;
-  margin-left: auto;   /* THIS pushes links to the right */
-  margin-right: 30px;  /* space before button */
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #0e5f59;
-  font-weight: 500;
-}
-
-.download-btn {
-  background: #0e5f59;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px  50px; 
+  padding: 40px 60px;
 }
 
 .logo img {
   width: 104px;
   height: 73px;
-}.nav-links a:hover,
-.nav-links a:focus {
-  color: #064a45;   /* deep green */
 }
+
+/* Links container */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+/* Nav links */
+.nav-links a {
+  text-decoration: none;
+  color: #0e5f59;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover / active state */
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #064a45;
+}
+
+/* Button */
+.download-btn {
+  background: #0e5f59;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
 .download-btn:hover {
   background: #064a45;
+}
+/* Default link style */
+.nav-links a {
+  text-decoration: none;
+  color: #0e5f59;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  color: #064a45; /* deep green */
+}
+
+/* Active (clicked/current page) */
+.nav-links a.active {
+  color: #064a45; /* deep green */
+}
+/* Nav links */
+.nav-links a {
+  text-decoration: none;
+  color: #0e5f59;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+/* Hover */
+.nav-links a:hover {
+  color: #043c38;   /* deeper green */
+  font-weight: 600;
+  font-size: 17px;
+}
+
+/* Active (current page) */
+.nav-links a.active {
+  color: #043c38;   /* stays deeper green */
+  font-weight: 600;
+  font-size: 17px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #0e5f59;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+/* Hover */
+.nav-links a:hover {
+  color: #022f2c;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+/* Active page */
+.nav-links a.active {
+  color: #022f2c;
+  font-weight: 700;
+  font-size: 17px;
 }
