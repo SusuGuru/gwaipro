@@ -103,3 +103,41 @@
   width: 15px;
   height: 418px;
 }
+/* HERO */
+.about-hero h1 {
+  font-size: 72px; /* was 64px */
+  font-weight: 700;
+  color: #0e5f59;
+}
+
+.about-hero p {
+  margin-top: 20px;
+  font-size: 24px; /* was 20px */
+  color: #0e5f59;
+}
+
+/* MISSION & VISION */
+.mission h2,
+.vision h2 {
+  font-size: 65px; /* was 36px */
+  margin-bottom: 25px;
+  color: #0e5f59;
+}
+
+.mission p,
+.vision p {
+  font-size: 20px; /* was 16px */
+  line-height: 1.8;
+}
+
+/* TEAM */
+.team h2 {
+  font-size: 59px; /* was 42px */
+  margin-bottom: 60px;
+  color: #0e5f59;
+}
+
+.team p {
+  font-size: 20px !important; /* increase team description text */
+  line-height: 1.9 !important;
+}

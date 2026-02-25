@@ -16,7 +16,7 @@ function Navbar() {
         <Link to="/contact">Contact Us</Link>
       </div>
 
-      <button className="download-btn">Download App</button>
+      <button className="download-btn">Join the Waitlist</button>
     </nav>
   );
 }

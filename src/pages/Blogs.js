@@ -85,35 +85,37 @@ function Blogs() {
           </div>
         </div>
 
-        {/* ================= BLOG GRID ================= */}
-        <div className="blog-grid">
-          {currentBlogs.map((blog) => (
-            <div key={blog.id} className="blog-card">
+       {/* ================= BLOG GRID ================= */}
+{/*
+<div className="blog-grid">
+  {currentBlogs.map((blog) => (
+    <div key={blog.id} className="blog-card">
 
-              <div className="blog-image">
-                <img src={blogImg} alt="The Psychology of Money" />
-              </div>
+      <div className="blog-image">
+        <img src={blogImg} alt="The Psychology of Money" />
+      </div>
 
-              <h3>{blog.title}</h3>
+      <h3>{blog.title}</h3>
 
-              <div className="blog-meta">
-                <span>Author: {blog.author}</span>
-                <span> | </span>
-                <span>Published on {blog.date}</span>
-              </div>
+      <div className="blog-meta">
+        <span>Author: {blog.author}</span>
+        <span> | </span>
+        <span>Published on {blog.date}</span>
+      </div>
 
-              <p>
-                This book is about the need to understand how money works
-                for musicians so that they don’t end up being broke.
-                You will realize that wealth is not about income but
-                about behavior and long-term discipline.
-              </p>
+      <p>
+        This book is about the need to understand how money works
+        for musicians so that they don’t end up being broke.
+        You will realize that wealth is not about income but
+        about behavior and long-term discipline.
+      </p>
 
-              <button className="read-btn">Read Now</button>
+      <button className="read-btn">Read Now</button>
 
-            </div>
-          ))}
-        </div>
+    </div>
+  ))}
+</div>
+*/}
 
         {/* ================= PAGINATION ================= */}
         <div className="pagination">

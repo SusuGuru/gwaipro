@@ -8,7 +8,9 @@ function Contact() {
 
         {/* LEFT SIDE */}
         <div className="contact-left">
-          <h1>Get In<br />Touch</h1>
+          <h1>
+            Get In<br />Touch
+          </h1>
 
           <p className="contact-description">
             We’re here to help! Whether you have a question about our services,
@@ -17,11 +19,20 @@ function Contact() {
           </p>
 
           <div className="contact-info">
-            <p><strong>Email:</strong><br />support@gwaipro.com</p>
+            <p>
+              <strong>Email:</strong><br />
+              support@gwaipro.com
+            </p>
 
-            <p><strong>Phone:</strong><br />(+233) 55 051 7070</p>
+            <p>
+              <strong>Phone:</strong><br />
+              (+233) 55 051 7070
+            </p>
 
-            <p><strong>WhatsApp:</strong><br />(+233) 55 051 7070</p>
+            <p>
+              <strong>WhatsApp:</strong><br />
+              (+233) 55 051 7070
+            </p>
 
             <span className="availability">
               Available Monday to Friday, 9AM - 9PM GMT +00
@@ -31,25 +42,49 @@ function Contact() {
 
         {/* RIGHT SIDE FORM */}
         <div className="contact-right">
-          <form className="contact-form">
+          <form
+            className="contact-form"
+            action="mailto:support@gwaipro.com"
+            method="POST"
+            encType="text/plain"
+          >
 
             <div className="form-row">
               <div>
                 <label>First Name</label>
-                <input type="text" placeholder="Enter your first name" />
+                <input
+                  name="First Name"
+                  type="text"
+                  placeholder="Enter your first name"
+                  required
+                />
               </div>
 
               <div>
                 <label>Last Name</label>
-                <input type="text" placeholder="Enter your last name" />
+                <input
+                  name="Last Name"
+                  type="text"
+                  placeholder="Enter your last name"
+                  required
+                />
               </div>
             </div>
 
             <label>Email</label>
-            <input type="email" placeholder="Enter your email" />
+            <input
+              name="Email"
+              type="email"
+              placeholder="Enter your email"
+              required
+            />
 
             <label>How can we help?</label>
-            <textarea placeholder="Enter your message"></textarea>
+            <textarea
+              name="Message"
+              placeholder="Enter your message"
+              required
+            ></textarea>
 
             <button type="submit" className="send-btn">
               Send Message &gt;

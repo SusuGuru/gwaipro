@@ -299,7 +299,7 @@
 /* LEFT phone (back) */
 .first {
   left: 20px;
-  top: 110px;
+  top: -15px;
   z-index: 1;
 }
 
@@ -395,4 +395,61 @@
   align-items: flex-start;
   padding: 140px 8%;
   gap: 80px;
+}
+.how-left {
+  flex: 1;
+  text-align: center;   /* center text block */
+}
+
+.how-left h2 {
+  font-size: 90px;      /* bigger */
+  color: #0e5f59;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.how-left p {
+  margin: 0 auto;       /* center paragraph */
+  margin-top: 20px;
+  font-size: 22px;
+  color: #0e5f59;
+  max-width: 500px;
+}
+.blogs-left h2 {
+  font-size: 100px;
+  color: #0e5f59;
+}
+
+.blogs-left p {
+  margin-top: 20px;
+  font-size: 25px;
+  color: #0e5f59;
+  max-width: 300px;
+}
+.how-steps {
+  margin-top: 30px;
+  max-width: 380px;
+}
+
+.how-steps p {
+  font-size: 18px;
+  color: #0e5f59;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.how-steps span {
+  font-weight: 600;
+  margin-right: 6px;
+}
+.how-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers everything horizontally */
+  text-align: center;    /* centers the text */
+}
+.highlight {
+  color: #084f4a;   /* slightly deeper green */
+  font-weight: 600;
 }

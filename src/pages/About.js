@@ -1,5 +1,4 @@
 import bg from "../assets/bg.png";
-import avatar from "../assets/avatar.png";
 import "../styles/about.css";
 import divider from "../assets/divider.png";
 
@@ -22,16 +21,20 @@ function About() {
         <div className="mission">
           <h2>The GwaiPro Mission</h2>
           <p>
-            Our mission is to connect musicians with clients worldwide,
-            providing a seamless platform for booking and collaboration.
+            Our mission is to connect musicians with clients around the world
+            through a simple, seamless platform for bookings and collaborations.
           </p>
         </div>
 
-   <img src={divider} alt="divider" className="about-divider" />
+        <img src={divider} alt="divider" className="about-divider" />
 
         <div className="vision">
           <h2>The GwaiPro Vision</h2>
-          <p>We connect musicians around the world</p>
+          <p>
+            Our vision is to transform the global music industry by connecting
+            musicians around the world and building a strong, supportive
+            community.
+          </p>
         </div>
       </section>
 
@@ -39,15 +42,23 @@ function About() {
       <section className="team">
         <h2>Team GwaiPro</h2>
 
-        <div className="team-grid">
-          {[1, 2, 3, 4, 5, 6].map((item) => (
-            <div key={item} className="team-card">
-              <p className="role">Co-Founder and CEO</p>
-              <img src={avatar} alt="team" className="avatar" />
-              <h3>Mr. Donald Gwaikolo</h3>
-            </div>
-          ))}
-        </div>
+        <p
+          style={{
+            maxWidth: "800px",
+            margin: "0 auto",
+            fontSize: "16px",
+            lineHeight: "1.8",
+            color: "#0e5f59",
+          }}
+        >
+          Team GwaiPro is a small team of inspired musicians working full-time
+          in music, software development, design, and marketing who have come
+          together with a common goal of solving problems in the music space,
+          and creating value for musicians.
+          <br />
+          <br />
+          <strong>GwaiPro is built by musicians, for musicians.</strong>
+        </p>
       </section>
     </div>
   );
