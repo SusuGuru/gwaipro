@@ -19,50 +19,41 @@ function ComingSoon() {
         </p>
 
         <div className="waitlist-form">
-          <input
-            type="email"
-            placeholder="example@example.com"
-          />
-          <button>Join the Waitlist</button>
-        </div>
+  <div className="input-wrapper">
+    <span className="input-label">email address</span>
+    <input type="email" placeholder="example@example.com" />
+  </div>
+  <button>Join the Waitlist</button>
+</div>
       </section>
 
-      {/* ================= ABOUT / VISION ================= */}
       <section className="about-section">
+  <div className="about-grid">
 
-        <div className="about-grid">
+    {/* ROW 1 */}
+    <h2 className="big-title">ABOUT US</h2>
+    <p className="tagline">
+      We are musicians who build for musicians
+    </p>
 
-          {/* LEFT */}
-          <div className="about-left">
-            <h2>ABOUT US</h2>
+    {/* ROW 2 */}
+    <p className="body-text">
+      Our vision is to transform the global music industry by
+      connecting musicians around the world and building a strong,
+      supportive community.
+    </p>
+    <h2 className="big-title">OUR VISION</h2>
 
-            <p>
-              Our vision is to transform the global music industry by
-              connecting musicians around the world and building a
-              strong, supportive community.
-            </p>
+    {/* ROW 3 */}
+    <h2 className="big-title">OUR MISSION</h2>
+    <p className="body-text">
+      Our mission is to connect musicians with clients around
+      the world through a simple, seamless platform for
+      bookings and collaborations.
+    </p>
 
-            <h2 className="mission-title">OUR MISSION</h2>
-          </div>
-
-          {/* RIGHT */}
-          <div className="about-right">
-            <p className="tagline">
-              We are musicians who build for musicians
-            </p>
-
-            <h2>OUR VISION</h2>
-
-            <p>
-              Our mission is to connect musicians with clients around
-              the world through a simple, seamless platform for
-              bookings and collaborations.
-            </p>
-          </div>
-
-        </div>
-
-      </section>
+  </div>
+</section>
 
     </div>
   );

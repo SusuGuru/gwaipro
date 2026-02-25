@@ -16,7 +16,9 @@ function Navbar() {
         <Link to="/contact">Contact Us</Link>
       </div>
 
-      <button className="download-btn">Join the Waitlist</button>
+      <Link to="/coming-soon" className="download-btn">
+  Join the Waitlist
+</Link>
     </nav>
   );
 }

@@ -1,128 +1,144 @@
-/* ================= PAGE ================= */
+/* ================= PAGE BACKGROUND ================= */
 
 .coming-page {
   width: 100%;
-  font-family: "Inter", sans-serif;
+  min-height: 100vh;
   color: #1f5e59;
+
+
 }
+
 
 /* ================= HERO ================= */
 
 .coming-hero {
   text-align: center;
-  padding: 140px 20px 100px;
+  padding: 160px 20px 120px;
   max-width: 900px;
   margin: 0 auto;
 }
 
 .coming-hero h1 {
-  font-size: 64px;
+  font-size: 72px;
   font-weight: 800;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
 }
 
 .hero-sub {
-  font-size: 24px;
-  line-height: 1.5;
-  margin-bottom: 16px;
+  font-size: 26px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .hero-small {
-  font-size: 14px;
+  font-size: 15px;
   opacity: 0.8;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
+
 
 /* ================= WAITLIST ================= */
 
 .waitlist-form {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  position: relative;
 }
 
 .waitlist-form input {
-  width: 300px;
-  padding: 14px;
-  border-radius: 8px;
+  width: 380px;
+  padding: 18px;
+  border-radius: 12px;
   border: none;
   background: #f2f2f2;
-  font-size: 14px;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .waitlist-form button {
-  padding: 14px 22px;
+  padding: 18px 28px;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   background: #1f5e59;
   color: white;
   font-weight: 600;
+  font-size: 15px;
   cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.2s ease;
 }
 
 .waitlist-form button:hover {
-  opacity: 0.9;
+  transform: translateY(-2px);
 }
+
 
 /* ================= ABOUT SECTION ================= */
 
 .about-section {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 20px 120px;
+  padding: 120px 20px 160px;
 }
 
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
+  gap: 120px;
+  align-items: center;
 }
+
 
 /* LEFT SIDE */
 
 .about-left h2 {
-  font-size: 48px;
+  font-size: 60px;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  line-height: 1.1;
 }
 
 .about-left p {
-  line-height: 1.8;
-  max-width: 420px;
+  line-height: 1.9;
+  max-width: 480px;
+  font-size: 18px;
 }
 
 .mission-title {
-  margin-top: 80px;
+  margin-top: 120px;
 }
+
 
 /* RIGHT SIDE */
 
 .about-right h2 {
-  font-size: 48px;
+  font-size: 60px;
   font-weight: 800;
-  margin: 40px 0 20px;
+  margin: 60px 0 30px;
 }
 
 .about-right p {
-  line-height: 1.8;
-  max-width: 420px;
+  line-height: 1.9;
+  max-width: 480px;
+  font-size: 18px;
 }
 
 .tagline {
   text-align: right;
-  font-size: 18px;
-  margin-bottom: 40px;
+  font-size: 20px;
+  margin-bottom: 60px;
 }
+
 
 /* ================= RESPONSIVE ================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
   .coming-hero h1 {
-    font-size: 42px;
+    font-size: 48px;
   }
 
   .hero-sub {
@@ -131,7 +147,75 @@
 
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 70px;
+  }
+
+  .about-left h2,
+  .about-right h2 {
+    font-size: 42px;
+  }
+
+  .tagline {
+    text-align: left;
+  }
+}
+.input-wrapper {
+  position: relative;
+}
+
+.input-label {
+  position: absolute;
+  top: -10px;
+  left: 18px;
+  background: #cde3dd;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+.about-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 160px 40px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 140px;
+  row-gap: 120px;
+  align-items: start;
+}
+
+/* MASSIVE TITLES */
+.big-title {
+  font-size: 84px;
+  font-weight: 800;
+  line-height: 1.05;
+  margin: 0;
+}
+
+/* PARAGRAPHS */
+.body-text {
+  font-size: 22px;
+  line-height: 1.8;
+  max-width: 520px;
+  margin: 0;
+}
+
+/* TAGLINE */
+.tagline {
+  font-size: 24px;
+  text-align: right;
+  margin: 0;
+}
+@media (max-width: 1100px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    row-gap: 80px;
+  }
+
+  .big-title {
+    font-size: 48px;
   }
 
   .tagline {

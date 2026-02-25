@@ -11,7 +11,7 @@ function Footer() {
         <div className="footer-left">
           <img src={logo} alt="logo" className="footer-logo" />
 
-          <p className="tagline">
+          <p className="footer-tagline">
             Connecting Musician<br />
             Around the World.
           </p>
