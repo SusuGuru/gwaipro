@@ -143,15 +143,25 @@
     padding: 40px;
   }
 }
-input,
-textarea {
+/* INPUTS — SMALLER */
+.contact-form input,
+.contact-form textarea {
   width: 100%;
-  padding: 12px;
-  height: 45px;
-  font-size: 14px;
-  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 2px solid #7ca6a2;
+  background: #e9f0ec;
+  outline: none;
 }
 
-textarea {
-  height: 120px;
+.contact-form input {
+  height: 45px;
+  margin-bottom: 20px;
+}
+
+.contact-form textarea {
+  height: 130px;
+  resize: none;
+  margin-bottom: 30px;
 }

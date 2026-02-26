@@ -222,3 +222,36 @@
     text-align: left;
   }
 }
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.modal {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  background: #0e5f59;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
