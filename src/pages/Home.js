@@ -41,32 +41,26 @@ function Home() {
         </div>
       </section>
 
-      {/* BLOGS */}
-      {/*
-<section className="blogs">
-...
+      {/* BLOGS
+<section>
+  <div className="blogs-left">
+    <h2>Blogs</h2>
+    <p>Get latest trends, news and insights from the music space</p>
+
+    <div className="blog-card left-card">
+      <img src={blog} alt="blog" />
+    </div>
+  </div>
+
+  <div className="blogs-right">
+    {[1, 2, 3, 4].map((item) => (
+      <div key={item} className="blog-card">
+        <img src={blog} alt="blog" />
+      </div>
+    ))}
+  </div>
 </section>
 */}
-<section>
-        <div className="blogs-left">
-          <h2>Blogs</h2>
-          <p>Get latest trends, news and insights from the music space</p>
-
-          {/* One card under text */}
-          <div className="blog-card left-card">
-            <img src={blog} alt="blog" />
-          </div>
-        </div>
-
-        <div className="blogs-right">
-          {[1, 2, 3, 4].map((item) => (
-            <div key={item} className="blog-card">
-              <img src={blog} alt="blog" />
-            </div>
-          ))}
-        </div>
-      </section>
-
     </div>
   );
 }
