@@ -143,3 +143,15 @@
     padding: 40px;
   }
 }
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  height: 45px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+textarea {
+  height: 120px;
+}

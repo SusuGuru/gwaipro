@@ -453,3 +453,20 @@
   color: #084f4a;   /* slightly deeper green */
   font-weight: 600;
 }
+.how-it-works h2 {
+  font-size: 40px;
+}
+
+.how-it-works p {
+  font-size: 18px;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .how-it-works h2 {
+    font-size: 28px;
+  }
+
+  .how-it-works p {
+    font-size: 16px;
+  }
+}

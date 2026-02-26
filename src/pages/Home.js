@@ -42,7 +42,12 @@ function Home() {
       </section>
 
       {/* BLOGS */}
-      <section className="blogs">
+      {/*
+<section className="blogs">
+...
+</section>
+*/}
+<section>
         <div className="blogs-left">
           <h2>Blogs</h2>
           <p>Get latest trends, news and insights from the music space</p>

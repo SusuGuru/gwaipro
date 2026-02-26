@@ -1,6 +1,9 @@
 import "../styles/ComingSoon.css";
+import { useState } from "react";
+
 
 function ComingSoon() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="coming-page">
 
