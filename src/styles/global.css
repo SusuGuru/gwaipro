@@ -1,29 +1,52 @@
+/* ================= GLOBAL MOBILE FIX + CUSTOM STYLES ================= */
+
+/* RESET AND MOBILE SAFETY */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  overflow-x: hidden; /* stops horizontal scrolling */
+}
+
+/* MEDIA RESPONSIVENESS */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* BODY STYLES */
 body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;   /* default weight */
+  font-weight: 400; /* default weight */
   margin: 0;
   color: #0e5f59;
 }
 
+/* HEADINGS RESET */
 h1, h2, h3 {
   margin: 0;
 }
 
+/* CONTAINER CLASS */
 .container {
   width: 85%;
   margin: auto;
 }
 
+/* BUTTON STYLING */
 button {
   cursor: pointer;
-}.page-wrapper {
-  background-image: url("../assets/bg.png");
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
 }
+
+/* PAGE WRAPPER WITH BACKGROUND */
 .page-wrapper {
   background-image: url("../assets/bg.png");
   background-size: cover;
   background-position: center;
+  min-height: 100vh;
 }
