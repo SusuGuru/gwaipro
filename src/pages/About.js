@@ -19,7 +19,8 @@ function About() {
       {/* MISSION & VISION */}
       <section className="mission-vision">
         <div className="mission">
-          <h2>The GwaiPro Mission</h2>
+          <h2>The GwaiPro
+          Mission</h2>
           <p>
             Our mission is to connect musicians with clients around the world
             through a simple, seamless platform for bookings and collaborations.
@@ -29,7 +30,8 @@ function About() {
         <img src={divider} alt="divider" className="about-divider" />
 
         <div className="vision">
-          <h2>The GwaiPro Vision</h2>
+          <h2>The GwaiPro Vision 
+          </h2>
           <p>
             Our vision is to transform the global music industry by connecting
             musicians around the world and building a strong, supportive
@@ -55,9 +57,9 @@ function About() {
           in music, software development, design, and marketing who have come
           together with a common goal of solving problems in the music space,
           and creating value for musicians.
-          <br />
-          <br />
-          <strong>GwaiPro is built by musicians, for musicians.</strong>
+          <strong className="highlight-line">
+  GwaiPro is built by musicians, for musicians.
+</strong>
         </p>
       </section>
     </div>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 import logo from "../assets/gwaipro.png";
-
+import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="navbar">

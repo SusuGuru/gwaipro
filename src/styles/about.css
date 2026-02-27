@@ -32,11 +32,6 @@
   padding: 80px 10%;
 }
 
-.mission,
-.vision {
-  width: 400px;
-}
-
 .mission h2,
 .vision h2 {
   font-size: 36px;
@@ -122,12 +117,14 @@
   font-size: 65px; /* was 36px */
   margin-bottom: 25px;
   color: #0e5f59;
+  text-align: center;
 }
 
 .mission p,
 .vision p {
   font-size: 20px; /* was 16px */
   line-height: 1.8;
+  text-align: center;
 }
 
 /* TEAM */
@@ -140,4 +137,72 @@
 .team p {
   font-size: 20px !important; /* increase team description text */
   line-height: 1.9 !important;
+}
+.mission h2,
+.vision h2,
+.team h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;       /* Medium */
+  font-size: 64px;
+  line-height: 80px;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0;
+}
+.mission,
+.vision {
+  width: 600px;   /* or 650px if needed */
+}
+.about-hero p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;       /* Regular */
+  font-size: 32px;
+  line-height: 59px;
+  letter-spacing: 0;
+  color: #0e5f59;
+  margin-top: 20px;
+}
+.about-hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;       /* ExtraBold */
+  font-size: 96px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  color: #0e5f59;
+  margin: 0;
+}
+.mission p,
+.vision p,
+.team p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;       /* Light */
+  font-size: 25px;
+  line-height: 35px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #156669;
+  margin: 0 auto;
+}
+.team p strong {
+  color: #156669;     /* deep green */
+  font-weight: 600;   /* slightly stronger than 300 */
+}
+.team-description {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: center;
+  color: #156669;
+
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.highlight-line {
+  display: block;      /* forces it to new line */
+  margin-top: 25px;    /* controls spacing properly */
+  font-weight: 500;
+  color: #156669;
 }

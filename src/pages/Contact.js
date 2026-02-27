@@ -1,9 +1,18 @@
+import { useState } from "react";
 import "../styles/contact.css";
+import checkbox from "../assets/checkbox.png";
 
 function Contact() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // stop mailto reload
+    setShowModal(true);
+    e.target.reset(); // clear form
+  };
+
   return (
     <div className="contact-page">
-
       <div className="contact-container">
 
         {/* LEFT SIDE */}
@@ -42,18 +51,12 @@ function Contact() {
 
         {/* RIGHT SIDE FORM */}
         <div className="contact-right">
-          <form
-            className="contact-form"
-            action="mailto:support@gwaipro.com"
-            method="POST"
-            encType="text/plain"
-          >
-
+          <form className="contact-form" onSubmit={handleSubmit}>
+            
             <div className="form-row">
               <div>
                 <label>First Name</label>
                 <input
-                  name="First Name"
                   type="text"
                   placeholder="Enter your first name"
                   required
@@ -63,7 +66,6 @@ function Contact() {
               <div>
                 <label>Last Name</label>
                 <input
-                  name="Last Name"
                   type="text"
                   placeholder="Enter your last name"
                   required
@@ -73,7 +75,6 @@ function Contact() {
 
             <label>Email</label>
             <input
-              name="Email"
               type="email"
               placeholder="Enter your email"
               required
@@ -81,7 +82,6 @@ function Contact() {
 
             <label>How can we help?</label>
             <textarea
-              name="Message"
               placeholder="Enter your message"
               required
             ></textarea>
@@ -92,8 +92,38 @@ function Contact() {
 
           </form>
         </div>
-
       </div>
+
+      {/* SUCCESS MODAL */}
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="success-modal">
+            
+            <div className="modal-top">
+              <img
+  src={checkbox}
+  alt="Success"
+  className="success-image"
+/>
+              <button
+                className="close-btn"
+                onClick={() => setShowModal(false)}
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="modal-content">
+              <h2>Success</h2>
+              <p>
+                Thank you for sharing your feedback with us.
+                We will respond within 24 hours
+              </p>
+            </div>
+
+          </div>
+        </div>
+      )}
 
     </div>
   );

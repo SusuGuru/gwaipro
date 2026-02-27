@@ -1,8 +1,8 @@
 import "../styles/ComingSoon.css";
 import { useState } from "react";
+import checkbox from "../assets/checkbox.png";
 
 function ComingSoon() {
-
   /* ================= STATE ================= */
   const [email, setEmail] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -60,22 +60,6 @@ function ComingSoon() {
 
       </section>
 
-      {/* ================= SUCCESS MODAL ================= */}
-      {showModal && (
-        <div className="modal-overlay">
-          <div className="modal">
-            <h2>Congratulations!</h2>
-            <p>
-              You have joined our waitlist successfully.
-            </p>
-
-            <button onClick={() => setShowModal(false)}>
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-
       {/* ================= ABOUT ================= */}
       <section className="about-section">
         <div className="about-grid">
@@ -102,6 +86,39 @@ function ComingSoon() {
 
         </div>
       </section>
+
+      {/* ================= SUCCESS MODAL ================= */}
+      {showModal && (
+        <div className="modal-overlay">
+
+          <div className="success-modal">
+
+            {/* Close Button */}
+            <button
+              className="modal-close"
+              onClick={() => setShowModal(false)}
+            >
+              ×
+            </button>
+
+            {/* Top Green Section */}
+            <div className="modal-top">
+              <img src={checkbox} alt="Success" />
+            </div>
+
+            {/* Bottom White Section */}
+            <div className="modal-body">
+              <h3>Success</h3>
+              <p>
+                Congratulations! You’ve successfully joined our waitlist.
+                We’ll notify you as soon as we launch.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      )}
 
     </div>
   );
