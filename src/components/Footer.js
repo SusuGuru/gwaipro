@@ -1,5 +1,6 @@
 import "../styles/footer.css";
 import logo from "../assets/gwaipro-w.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -70,10 +71,10 @@ function Footer() {
       <div className="footer-bottom">
         <span>©GwaiPro. All Rights Reserved 2026</span>
 
-        <div className="footer-legal">
-          <span>Privacy Policy</span>
-          <span>Terms of Service</span>
-        </div>
+       <div className="footer-legal">
+  <Link to="/privacy-policy">Privacy Policy</Link>
+  <Link to="/terms-of-service">Terms of Service</Link>
+</div>
       </div>
 
     </footer>

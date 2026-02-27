@@ -6,6 +6,7 @@ import Blogs from "./pages/Blogs";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ComingSoon from "./pages/ComingSoon";
+import { BrowserRouter } from "react-router-dom";
 
 function Layout() {
   const location = useLocation();
@@ -21,7 +22,9 @@ function Layout() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
-        </Routes>
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+<Route path="/terms-of-service" element={<TermsOfService />} />
+</Routes>
       </div>
 
       {/* Footer OUTSIDE background */}

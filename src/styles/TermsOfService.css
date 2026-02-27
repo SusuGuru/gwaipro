@@ -1,0 +1,93 @@
+/* ================= PAGE WRAPPER ================= */
+.tos-page {
+  font-family: "Montserrat", sans-serif;
+  color: #2d2d2d;
+}
+
+/* ================= HERO ================= */
+.tos-hero {
+  text-align: center;
+  padding: 150px 20px 120px;
+}
+
+.tos-hero h1 {
+  font-size: 96px;
+  font-weight: 800;
+  color: #0f6b63;
+  margin-bottom: 25px;
+}
+
+.tos-hero p {
+  font-size: 26px;
+  color: #1f3c3a;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ================= CONTENT SECTION ================= */
+.tos-content {
+  background: #f3f3f3;
+  padding: 80px 0;
+}
+
+.tos-container {
+  width: 65%;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* SECTION TITLE */
+.tos-container h2 {
+  color: #0f6b63;
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.last-updated {
+  display: block;
+  font-size: 14px;
+  color: #5f6f6d;
+  margin-bottom: 30px;
+}
+
+/* SECTION HEADINGS */
+.tos-container h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f3c3a;
+}
+
+/* PARAGRAPHS */
+.tos-container p {
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #4a4a4a;
+}
+
+/* LISTS */
+.tos-container ul {
+  margin: 10px 0 20px 20px;
+}
+
+.tos-container li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #4a4a4a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .tos-container {
+    width: 85%;
+  }
+
+  .tos-hero h1 {
+    font-size: 60px;
+  }
+
+  .tos-hero p {
+    font-size: 20px;
+  }
+}
