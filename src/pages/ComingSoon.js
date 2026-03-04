@@ -93,29 +93,26 @@ function ComingSoon() {
 
           <div className="success-modal">
 
-            {/* Close Button */}
-            <button
-              className="modal-close"
-              onClick={() => setShowModal(false)}
-            >
-              ×
-            </button>
+  <div className="modal-top">
+    <button
+      className="modal-close"
+      onClick={() => setShowModal(false)}
+    >
+      ×
+    </button>
 
-            {/* Top Green Section */}
-            <div className="modal-top">
-              <img src={checkbox} alt="Success" />
-            </div>
+    <img src={checkbox} alt="Success" />
+  </div>
 
-            {/* Bottom White Section */}
-            <div className="modal-body">
-              <h3>Success</h3>
-              <p>
-                Congratulations! You’ve successfully joined our waitlist.
-                We’ll notify you as soon as we launch.
-              </p>
-            </div>
+  <div className="modal-body">
+    <h3>Success</h3>
+    <p>
+      Congratulations! You’ve successfully joined our waitlist.
+      We’ll notify you as soon as we launch.
+    </p>
+  </div>
 
-          </div>
+</div>
 
         </div>
       )}
