@@ -3,13 +3,49 @@ import "../styles/contact.css";
 import checkbox from "../assets/checkbox.png";
 
 function Contact() {
-  const [showModal, setShowModal] = useState(false);
+ const [showModal, setShowModal] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault(); // stop mailto reload
-    setShowModal(true);
-    e.target.reset(); // clear form
-  };
+const [firstName, setFirstName] = useState("");
+const [lastName, setLastName] = useState("");
+const [email, setEmail] = useState("");
+const [message, setMessage] = useState("");
+
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch("http://localhost:5000/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        message,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      setShowModal(true);
+
+      // Clear inputs
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setMessage("");
+    } else {
+      alert(data.message);
+    }
+
+  } catch (error) {
+    alert("Server error");
+  }
+};
 
   return (
     <div className="contact-page">
@@ -57,34 +93,42 @@ function Contact() {
               <div>
                 <label>First Name</label>
                 <input
-                  type="text"
-                  placeholder="Enter your first name"
-                  required
-                />
+  type="text"
+  placeholder="Enter your first name"
+  value={firstName}
+  onChange={(e) => setFirstName(e.target.value)}
+  required
+/>
               </div>
 
               <div>
                 <label>Last Name</label>
                 <input
-                  type="text"
-                  placeholder="Enter your last name"
-                  required
-                />
+  type="text"
+  placeholder="Enter your last name"
+  value={lastName}
+  onChange={(e) => setLastName(e.target.value)}
+  required
+/>
               </div>
             </div>
 
             <label>Email</label>
             <input
-              type="email"
-              placeholder="Enter your email"
-              required
-            />
+  type="email"
+  placeholder="Enter your email"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  required
+/>
 
             <label>How can we help?</label>
             <textarea
-              placeholder="Enter your message"
-              required
-            ></textarea>
+  placeholder="Enter your message"
+  value={message}
+  onChange={(e) => setMessage(e.target.value)}
+  required
+></textarea>
 
             <button type="submit" className="send-btn">
               Send Message &gt;

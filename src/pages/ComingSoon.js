@@ -8,15 +8,30 @@ function ComingSoon() {
   const [showModal, setShowModal] = useState(false);
 
   /* ================= HANDLER ================= */
-  const handleJoinWaitlist = (e) => {
+  const handleJoinWaitlist = async (e) => {
     e.preventDefault();
 
-    if (!email) return;
+    try {
+      const response = await fetch("http://localhost:5000/api/waitlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
 
-    // later connect API here
+      const data = await response.json();
 
-    setShowModal(true);
-    setEmail("");
+      if (response.ok) {
+        setShowModal(true);
+        setEmail("");
+      } else {
+        alert(data.message);
+      }
+
+    } catch (error) {
+      alert("Server error");
+    }
   };
 
   return (
@@ -90,30 +105,28 @@ function ComingSoon() {
       {/* ================= SUCCESS MODAL ================= */}
       {showModal && (
         <div className="modal-overlay">
-
           <div className="success-modal">
 
-  <div className="modal-top">
-    <button
-      className="modal-close"
-      onClick={() => setShowModal(false)}
-    >
-      ×
-    </button>
+            <div className="modal-top">
+              <button
+                className="modal-close"
+                onClick={() => setShowModal(false)}
+              >
+                ×
+              </button>
 
-    <img src={checkbox} alt="Success" />
-  </div>
+              <img src={checkbox} alt="Success" />
+            </div>
 
-  <div className="modal-body">
-    <h3>Success</h3>
-    <p>
-      Congratulations! You’ve successfully joined our waitlist.
-      We’ll notify you as soon as we launch.
-    </p>
-  </div>
+            <div className="modal-body">
+              <h3>Success</h3>
+              <p>
+                Congratulations! You’ve successfully joined our waitlist.
+                We’ll notify you as soon as we launch.
+              </p>
+            </div>
 
-</div>
-
+          </div>
         </div>
       )}
 
