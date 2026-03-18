@@ -1,0 +1,44 @@
+.mobile-floating-cta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-floating-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #156669;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 4px 16px rgba(21, 102, 105, 0.4);
+    z-index: 999;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-floating-cta:hover {
+    background: #064a45;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(21, 102, 105, 0.5);
+  }
+
+  .mobile-floating-cta:active {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-floating-cta {
+    bottom: 16px;
+    right: 16px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}

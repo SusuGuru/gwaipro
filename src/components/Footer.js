@@ -1,14 +1,27 @@
 import "../styles/footer.css";
 import logo from "../assets/gwaipro-w.png";
-import { Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Footer() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLegalLink = (path) => {
+    if (location.pathname === path) {
+      // Already on this page — smooth scroll gives clear feedback
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // Different page — navigate; ScrollToTop handles the instant snap on arrival
+      navigate(path);
+    }
+  };
+
   return (
     <footer className="footer">
 
       <div className="footer-container">
 
-        {/* LEFT SECTION */}
+        {/* LEFT SECTION - Branding & Legal */}
         <div className="footer-left">
           <img src={logo} alt="logo" className="footer-logo" />
 
@@ -18,11 +31,7 @@ function Footer() {
           </p>
 
           <div className="socials">
-
-            {/* Facebook (not linked) */}
             <i className="fab fa-facebook-f"></i>
-
-            {/* Instagram */}
             <a
               href="https://www.instagram.com/gwaipro/"
               target="_blank"
@@ -30,8 +39,6 @@ function Footer() {
             >
               <i className="fab fa-instagram"></i>
             </a>
-
-            {/* TikTok */}
             <a
               href="https://www.tiktok.com/@gwaipro"
               target="_blank"
@@ -39,13 +46,19 @@ function Footer() {
             >
               <i className="fab fa-tiktok"></i>
             </a>
+          </div>
 
+          {/* Legal Links - Mobile Only */}
+          <div className="footer-legal-mobile">
+            <div className="legal-links-mobile">
+              <button onClick={() => handleLegalLink("/privacy-policy")}>Privacy Policy</button>
+              <button onClick={() => handleLegalLink("/terms-of-service")}>Terms of Service</button>
+            </div>
           </div>
         </div>
 
-        {/* RIGHT SECTION */}
+        {/* RIGHT SECTION - Links */}
         <div className="footer-right">
-
           <div className="footer-column">
             <h4>Our App</h4>
             <p>Download on App Store</p>
@@ -62,19 +75,22 @@ function Footer() {
             <a href="/about"><p>About Us</p></a>
             <a href="/contact"><p>Contact Us</p></a>
           </div>
-
         </div>
 
       </div>
 
-      {/* BOTTOM BAR */}
+      {/* BOTTOM BAR - Desktop Only */}
       <div className="footer-bottom">
-        <span>©GwaiPro. All Rights Reserved 2026</span>
+        <span className="copyright-text">© GwaiPro. All Rights Reserved 2026</span>
+        <div className="footer-legal">
+          <button onClick={() => handleLegalLink("/privacy-policy")}>Privacy Policy</button>
+          <button onClick={() => handleLegalLink("/terms-of-service")}>Terms of Service</button>
+        </div>
+      </div>
 
-       <div className="footer-legal">
-  <Link to="/privacy-policy">Privacy Policy</Link>
-  <Link to="/terms-of-service">Terms of Service</Link>
-</div>
+      {/* COPYRIGHT - Mobile Only (Outside Grid) */}
+      <div className="footer-copyright-mobile">
+        <span>© GwaiPro. All Rights Reserved 2026</span>
       </div>
 
     </footer>

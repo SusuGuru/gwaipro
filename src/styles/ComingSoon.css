@@ -13,7 +13,7 @@
 
 .coming-hero {
   text-align: center;
-  padding: 160px 20px 120px;
+  padding: 10px 20px 40px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -22,13 +22,13 @@
   font-size: 72px;
   font-weight: 800;
   letter-spacing: 3px;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .hero-sub {
   font-size: 26px;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 
@@ -50,6 +50,7 @@
   border: none;
   background: #f2f2f2;
   font-size: 15px;
+  font-family: "Montserrat", sans-serif;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
@@ -61,6 +62,7 @@
   color: white;
   font-weight: 600;
   font-size: 15px;
+  font-family: "Montserrat", sans-serif;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: 0.2s ease;
@@ -140,19 +142,6 @@
     font-size: 20px;
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 70px;
-  }
-
-  .about-left h2,
-  .about-right h2 {
-    font-size: 42px;
-  }
-
-  .tagline {
-    text-align: left;
-  }
 }
 .input-wrapper {
   position: relative;
@@ -204,17 +193,8 @@
   margin: 0;
 }
 @media (max-width: 1100px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    row-gap: 80px;
-  }
-
   .big-title {
-    font-size: 48px;
-  }
-
-  .tagline {
-    text-align: left;
+    font-size: 56px;
   }
 }
 .modal-overlay {
@@ -252,47 +232,199 @@
 }
 .hero-small {
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;          /* Light */
+  font-weight: 300;
   font-size: 24px;
   line-height: 35px;
   letter-spacing: 0;
   text-align: center;
   max-width: 981px;
-  margin: 0 auto 40px;       /* centers it */
+  margin: 0 auto 20px;
   color: #1f5e59;
 }
 .coming-hero h1 {
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;       /* ExtraBold */
+  font-weight: 800;
   font-size: 96px;
-  line-height: 1;         /* 100% */
+  line-height: 1;
   letter-spacing: 0;
   text-align: center;
   max-width: 981px;
-  margin: 0 auto 30px;    /* centers + spacing */
+  margin: 0 auto 14px;
   color: #1f5e59;
 }
 @media (max-width: 1000px) {
   .coming-hero h1 {
     font-size: 60px;
   }
+
+  .hero-sub {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    row-gap: 60px;
+  }
+
+  .big-title {
+    font-size: 56px;
+  }
+
+  .body-text {
+    font-size: 20px;
+  }
+
+  .tagline {
+    text-align: left;
+    font-size: 22px;
+  }
 }
+
+@media (max-width: 768px) {
+  .coming-hero {
+    padding: 40px 5% 60px;
+  }
+
+  .coming-hero h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: 2px;
+  }
+
+  .hero-sub {
+    font-size: 26px;
+    line-height: 1.4;
+    margin-bottom: 18px;
+  }
+
+  .hero-small {
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 0 5%;
+  }
+
+  .waitlist-form {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 5%;
+  }
+
+  .waitlist-form input {
+    width: 100%;
+    padding: 16px;
+    font-size: 15px;
+  }
+
+  .waitlist-form button {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  .input-wrapper {
+    width: 100%;
+  }
+
+  .input-label {
+    font-size: 11px;
+    top: -9px;
+    left: 16px;
+  }
+
+  .about-section {
+    padding: 60px 5% 80px;
+  }
+
+  /* Switch grid off — section becomes a flex column of paired blocks */
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+  }
+
+  /* Each .about-block is just a transparent wrapper on desktop;
+     on mobile we pair them by grouping consecutive siblings */
+  .about-block {
+    width: 100%;
+  }
+
+  /* Vision row: text block comes before heading block in DOM,
+     so swap them visually on mobile */
+  .about-block:nth-child(3) { order: 4; }
+  .about-block:nth-child(4) { order: 3; }
+
+  .big-title {
+    font-size: 34px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  .body-text {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 100%;
+  }
+
+  .tagline {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .success-modal {
+    width: 90%;
+    max-width: 360px;
+  }
+
+  .modal-body {
+    padding: 25px;
+  }
+
+  .modal-body h3 {
+    font-size: 17px;
+  }
+
+  .modal-body p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coming-hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-sub {
+    font-size: 22px;
+  }
+
+  .hero-small {
+    font-size: 16px;
+  }
+
+  .big-title {
+    font-size: 32px;
+  }
+
+  .body-text {
+    font-size: 16px;
+  }
+
+  .tagline {
+    font-size: 18px;
+  }
+}
+
 .hero-sub {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;          /* Regular */
+  font-weight: 400;
   font-size: 48px;
   line-height: 56px;
   letter-spacing: 0;
   text-align: center;
   max-width: 981px;
-  margin: 0 auto 30px;       /* centers and adds spacing */
+  margin: 0 auto 14px;
   color: #1f5e59;
-}
-@media (max-width: 1000px) {
-  .hero-sub {
-    font-size: 32px;
-    line-height: 40px;
-  }
 }
 /* ================= MODAL OVERLAY ================= */
 .modal-overlay {

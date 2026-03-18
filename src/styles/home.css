@@ -8,18 +8,27 @@
 
 .hero {
   text-align: center;
-  padding: 120px 8% 80px;
+  padding: 30px 8% 80px;
 }
 
 .hero h1 {
-  font-size: 72px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 96px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
   color: #0e5f59;
-  line-height: 1.1;
 }
 
 .hero p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.8;
+  letter-spacing: 0;
+  text-align: center;
   margin-top: 25px;
-  font-size: 22px;
   color: #0e5f59;
 }
 
@@ -46,7 +55,7 @@
 .how-left h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 96px;
+  font-size: 90px;
   line-height: 98px;
   color: #0e5f59;
   margin-bottom: 20px;
@@ -182,9 +191,7 @@
 /* ================= RESPONSIVE ================= */
 
 /* Tablet */
-
 @media (max-width: 1024px) {
-
   .how,
   .blogs {
     flex-direction: column;
@@ -204,62 +211,141 @@
     width: 100%;
     margin-top: 60px;
   }
+
+  .hero h1 {
+    font-size: 72px;
+  }
+
+  .hero p {
+    font-size: 28px;
+  }
 }
 
 /* Mobile */
-
 @media (max-width: 768px) {
-
   .home {
-    padding: 0 6%;
+    padding: 0 5%;
   }
 
-  .how-left h2,
-  .blogs-left h2 {
-    font-size: 42px;
-    line-height: 1.2;
+  .hero {
+    padding: 80px 5% 60px;
   }
 
-  .how-steps p,
-  .blogs-left p {
-    font-size: 16px;
+  .hero h1 {
+    font-size: 42px !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .hero p {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+    margin-top: 20px !important;
+  }
+
+  .how {
+    flex-direction: column;
+    padding: 40px 0;
+  }
+
+  .how-left {
+    margin-bottom: 50px;
+  }
+
+  .how-left h2 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+  }
+
+  .how-steps {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .how-steps p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+
+  .how-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .phones {
-    width: 300px;
-    height: 400px;
+    width: 100%;
+    max-width: 360px;
+    height: 380px;
+    margin: 0 auto;
   }
 
   .phones img {
-    width: 170px;
+    width: 160px;
+  }
+
+  .first {
+    left: 10px;
+    top: 0;
   }
 
   .second {
-    left: 70px;
+    left: 80px;
+    top: 20px;
   }
 
   .third {
-    left: 140px;
+    left: 160px;
+    top: 40px;
   }
 
   .blogs-right {
     grid-template-columns: 1fr;
   }
 }
-.hero h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;        /* ExtraBold */
-  font-size: 96px;
-  line-height: 100%;
-  letter-spacing: 0;
-  text-align: center;
-}
-.hero p {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;     /* Regular */
-  font-size: 32px;
-  line-height: 59px;
-  letter-spacing: 0;
-  text-align: center;   /* keeps it aligned with the h1 */
-  margin: 0;
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.3px;
+  }
+
+  .hero p {
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+  }
+
+  .how-left h2 {
+    font-size: 42px;
+  }
+
+  .how-steps p {
+    font-size: 16px;
+  }
+
+  .phones {
+    max-width: 300px;
+    height: 320px;
+  }
+
+  .phones img {
+    width: 130px;
+  }
+
+  .first {
+    left: 5px;
+  }
+
+  .second {
+    left: 60px;
+  }
+
+  .third {
+    left: 125px;
+  }
 }

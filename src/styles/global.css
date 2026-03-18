@@ -7,9 +7,14 @@
   box-sizing: border-box;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
 html, body, #root {
   width: 100%;
-  overflow-x: hidden; /* stops horizontal scrolling */
+  overflow-x: hidden;
 }
 
 /* MEDIA RESPONSIVENESS */
@@ -22,14 +27,19 @@ img, video, iframe {
 /* BODY STYLES */
 body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400; /* default weight */
+  font-weight: 400;
   margin: 0;
   color: #0e5f59;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* HEADINGS RESET */
 h1, h2, h3 {
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 /* CONTAINER CLASS */
@@ -41,12 +51,41 @@ h1, h2, h3 {
 /* BUTTON STYLING */
 button {
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* PAGE WRAPPER WITH BACKGROUND */
 .page-wrapper {
   background-image: url("../assets/bg.png");
-  background-size: cover;
-  background-position: center;
+  background-size: 100% 2402px; /* lock image to its true height for pixel-perfect strip control */
+  background-repeat: no-repeat;
+  background-position: center 0px;
   min-height: 100vh;
+}
+
+/* ── Per-page background crop positions ──────────────────────────────────────
+   The image is 2402px tall, divided into 20 strips of ~120px each.
+   Negative values shift the image upward, revealing lower strips.
+   Strip 1  =    0px  (top — blue-teal + yellow)
+   Strip 4  = -360px  (warm yellow/cream wave starts)
+   Strip 15 = -1680px (lower lavender zone)
+   ──────────────────────────────────────────────────────────────────────────── */
+.page-wrapper--home,
+.page-wrapper--blogs,
+.page-wrapper--about,
+.page-wrapper--contact,
+.page-wrapper--coming-soon  { background-position: center 0px; }
+
+.page-wrapper--tos,
+.page-wrapper--privacy      { background-position: center -360px; }
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    background-size: 100% 2402px;
+    background-attachment: scroll;
+  }
 }
