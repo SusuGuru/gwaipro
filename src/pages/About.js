@@ -1,15 +1,9 @@
-import bg from "../assets/bg.png";
 import "../styles/about.css";
-import divider from "../assets/divider.png";
+import divider from "../assets/Divider.png";
 
 function About() {
   return (
-    <div
-      className="about-wrapper"
-      style={{
-        backgroundImage: `url(${bg})`,
-      }}
-    >
+    <div className="about-wrapper">
       {/* HERO SECTION */}
       <section className="about-hero">
         <h1>About GwaiPro</h1>

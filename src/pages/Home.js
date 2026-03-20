@@ -2,8 +2,6 @@ import "../styles/home.css";
 import photo1 from "../assets/photo1.png";
 import photo2 from "../assets/photo2.png";
 import photo3 from "../assets/photo3.png";
-import blog from "../assets/blog.png";
-
 function Home() {
   return (
     <div className="home">

@@ -13,6 +13,7 @@ function PrivacyPolicy() {
       </section>
 
       <section className="legal-content">
+        <div className="legal-container">
         <h2>Privacy Policy</h2>
         <span className="last-updated">Last Updated: 27 Feb, 2026</span>
 
@@ -132,6 +133,7 @@ function PrivacyPolicy() {
           Accra, Ghana
         </p>
 
+        </div>
       </section>
     </div>
   );

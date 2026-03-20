@@ -79,25 +79,39 @@ function ComingSoon() {
       <section className="about-section">
         <div className="about-grid">
 
-          <h2 className="big-title">ABOUT US</h2>
-          <p className="tagline">
-            We are musicians who build for musicians
-          </p>
+          {/* Row 1 — About */}
+          <div className="about-block">
+            <h2 className="big-title">ABOUT US</h2>
+          </div>
+          <div className="about-block">
+            <p className="tagline">
+              We are musicians who build for musicians
+            </p>
+          </div>
 
-          <p className="body-text">
-            Our vision is to transform the global music industry by
-            connecting musicians around the world and building a strong,
-            supportive community.
-          </p>
+          {/* Row 2 — Vision (text left, heading right) */}
+          <div className="about-block">
+            <p className="body-text">
+              Our vision is to transform the global music industry by
+              connecting musicians around the world and building a strong,
+              supportive community.
+            </p>
+          </div>
+          <div className="about-block">
+            <h2 className="big-title">OUR VISION</h2>
+          </div>
 
-          <h2 className="big-title">OUR VISION</h2>
-
-          <h2 className="big-title">OUR MISSION</h2>
-          <p className="body-text">
-            Our mission is to connect musicians with clients around
-            the world through a simple, seamless platform for
-            bookings and collaborations.
-          </p>
+          {/* Row 3 — Mission */}
+          <div className="about-block">
+            <h2 className="big-title">OUR MISSION</h2>
+          </div>
+          <div className="about-block">
+            <p className="body-text">
+              Our mission is to connect musicians with clients around
+              the world through a simple, seamless platform for
+              bookings and collaborations.
+            </p>
+          </div>
 
         </div>
       </section>

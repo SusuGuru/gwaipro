@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "../styles/blogs.css";
 import innovation from "../assets/innovation.png";
-import blogImg from "../assets/blog.png";
 import authorImg from "../assets/avatar.png";
 
 function Blogs() {
@@ -27,8 +26,6 @@ function Blogs() {
   // Pagination logic
   const indexOfLast = currentPage * blogsPerPage;
   const indexOfFirst = indexOfLast - blogsPerPage;
-  const currentBlogs = sortedBlogs.slice(indexOfFirst, indexOfLast);
-
   const totalPages = Math.ceil(blogs.length / blogsPerPage);
 
   return (

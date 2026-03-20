@@ -1,21 +1,33 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import MobileCTA from "./components/MobileCTA";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import Blogs from "./pages/Blogs";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ComingSoon from "./pages/ComingSoon";
-import TermsOfService from "./pages/TermsOfService"; // ✅ Existing import
-import PrivacyPolicy from "./pages/PrivacyPolicy"; // ✅ Import added
+import TermsOfService from "./pages/TermsOfService";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+
+const bgClassMap = {
+  "/":                  "page-wrapper--home",
+  "/blogs":             "page-wrapper--blogs",
+  "/about":             "page-wrapper--about",
+  "/contact":           "page-wrapper--contact",
+  "/coming-soon":       "page-wrapper--coming-soon",
+  "/terms-of-service":  "page-wrapper--tos",
+  "/privacy-policy":    "page-wrapper--privacy",
+};
 
 function Layout() {
-  const location = useLocation();
+  const { pathname } = useLocation();
+  const bgClass = bgClassMap[pathname] || "page-wrapper--home";
 
   return (
     <>
-      {/* Background wrapper */}
-      <div className="page-wrapper">
+      <div className={`page-wrapper ${bgClass}`}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,13 +35,13 @@ function Layout() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/coming-soon" element={<ComingSoon />} />
-          <Route path="/terms-of-service" element={<TermsOfService />} /> {/* ✅ Route existing */}
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} /> {/* ✅ Route added */}
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </div>
 
-      {/* Footer OUTSIDE background */}
       <Footer />
+      <MobileCTA />
     </>
   );
 }
@@ -37,6 +49,7 @@ function Layout() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout />
     </Router>
   );
