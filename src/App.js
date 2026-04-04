@@ -10,9 +10,6 @@ import Contact from "./pages/Contact";
 import ComingSoon from "./pages/ComingSoon";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import BlogDetails from "./pages/BlogDetails";
-import Admin from "./pages/Admin";
-import AdminLogin from "./pages/AdminLogin";
 
 
 const bgClassMap = {
@@ -24,14 +21,6 @@ const bgClassMap = {
   "/terms-of-service":  "page-wrapper--tos",
   "/privacy-policy":    "page-wrapper--privacy",
 };
-
-function ProtectedAdmin({ children }) {
-  const token = localStorage.getItem("adminToken");
-  if (!token) {
-    return <AdminLogin />; // show login if not logged in
-  }
-  return children;
-}
 
 function Layout() {
   const { pathname } = useLocation();
@@ -49,16 +38,6 @@ function Layout() {
           <Route path="/coming-soon" element={<ComingSoon />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/blog/:id" element={<BlogDetails />} />
-          <Route 
-            path="/admin" 
-            element={
-              <ProtectedAdmin>
-                <Admin />
-              </ProtectedAdmin>
-            } 
-          />
-          <Route path="/admin-login" element={<AdminLogin />} />
         </Routes>
       </div>
 
