@@ -13,13 +13,14 @@ export default function AdminLogin() {
     setError("");
     setLoading(true);
 
-const res = await fetch("http://10.178.132.210:5000/api/auth/admin/sign-in", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({ email, password }),
-});
+    try {
+      const res = await fetch("http://13.50.252.177:3000/auth/admin/sign-in", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
 
       const data = await res.json();
       console.log("Login response:", data); // see backend response
