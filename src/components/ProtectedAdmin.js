@@ -1,13 +1,15 @@
-import { Navigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import AdminLogin from "./AdminLogin";
 
 export default function ProtectedAdmin({ children }) {
-  const token = localStorage.getItem("adminToken");
+  const [token, setToken] = useState(null);
 
-  // If no token, redirect to login page
-  if (!token) {
-    return <Navigate to="/admin-login" replace />;
-  }
+  useEffect(() => {
+    const storedToken = localStorage.getItem("adminToken");
+    setToken(storedToken);
+  }, []);
 
-  // If token exists, show admin panel
+  if (!token) return <AdminLogin />;
+
   return children;
 }
