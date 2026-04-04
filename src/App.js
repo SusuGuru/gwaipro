@@ -14,6 +14,7 @@ import BlogDetails from "./pages/BlogDetails";
 import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
 
+
 const bgClassMap = {
   "/":                  "page-wrapper--home",
   "/blogs":             "page-wrapper--blogs",
